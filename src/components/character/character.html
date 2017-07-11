@@ -1,0 +1,9 @@
+
+
+<tr *ngIf="currentCharacters.length > 0">
+  <td style="text-align: left;">Residents</td>
+</tr>
+
+<tr *ngFor="let character of currentCharacters">
+  <td colspan="2" style="text-align: left;"> &nbsp;&nbsp; - {{ (character && character.name) ? character.name  : '' }}</td>
+</tr>

@@ -1,0 +1,19 @@
+page-planet {
+
+  .planet-data {
+    width: 100%;
+
+    td {
+      padding: 2px 5px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #f7f7f7;
+    }
+
+    td:last-child {
+      text-align: right;
+    }
+  }
+
+}

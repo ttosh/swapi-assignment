@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="planet">
+
+   <img [src]="'http://via.placeholder.com/350x150?text=' + planet.name" />
+
+    <ion-card-content>
+
+      <table class="planet-data">
+
+        <tr>
+          <td>Rotation Period</td>
+          <td>{{ planet.rotation_period }}</td>
+        </tr>
+        
+        <tr>
+          <td>Orbital Period</td>
+          <td>{{ planet.orbital_period }}</td>
+        </tr>
+
+        <tr>
+          <td> Diameter</td>
+          <td> {{ planet.diameter }}</td>
+        </tr>
+
+        <tr>
+          <td> Climate</td>
+          <td> {{ planet.climate }}</td>
+        </tr>
+
+        <tr>
+          <td> Gravity</td>
+          <td> {{ planet.gravity }}</td>
+        </tr>
+
+        <tr>
+          <td> Terrain</td>
+          <td> {{ planet.terrain }}</td>
+        </tr>
+
+        <tr>
+          <td> Surface Water</td>
+          <td> {{ planet.surface_water }}</td>
+        </tr>
+
+        <tr>
+          <td> Population</td>
+          <td> {{ planet.population }}</td>
+        </tr>
+
+        <characters [characters]="planet.residents"></characters>
+
+
+      </table>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
